@@ -7,6 +7,12 @@ dist/food2fork-1.0
 dist/.DS_Store
 build/
 build/*
+lib/
+lib/*
+bin/
+bin/*
+include/*
+pip-selfcheck.json
 food2fork.egg-info/
 food2fork.egg-info/*
 *.pyc
