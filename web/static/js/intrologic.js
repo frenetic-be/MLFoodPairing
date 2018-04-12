@@ -1,6 +1,6 @@
 $("#ing-form").submit(function(e) {
 
-    var url = "http://frenetic.pythonanywhere.com/parse"; // the script where you handle the form input.
+    var url = "https://frenetic.pythonanywhere.com/parse"; // the script where you handle the form input.
 
     $.ajax({
         type: "GET",
