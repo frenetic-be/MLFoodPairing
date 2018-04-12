@@ -4,36 +4,45 @@
 '''
 Tests for food2fork
 '''
-import sys
-import os
+# import os
+# import sys
 import unittest
 
-sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir))
-
+import requests
 import food2fork
 
 
-class TestStringMethods(unittest.TestCase):
-    '''Class to test blah
+class TestAPIKey(unittest.TestCase):
+    '''Class to test if API key works
     '''
 
-    def test_upper(self):
-        '''Testing blah ...
+    def test_food2fork_recipe_request(self):
+        '''Testing if food2fork API key works
         '''
-        self.assertEqual('foo'.upper(), 'FOO')
+        url = 'http://food2fork.com/api/get'
+        params = {
+            'key': food2fork.FOOD2FORK_API_KEY,
+            'rId': 29159
+        }
+        response = requests.get(url, params=params)
+        self.assertEqual(response.status_code, 200)
 
-    def test_isupper(self):
-        '''Testing blah ...
-        '''
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
+        data = response.json()
+        self.assertTrue('recipe' in data)
 
-    def test_split(self):
-        '''Testing blah ...
+    def test_food2fork_search_request(self):
+        '''Testing if food2fork API key works
         '''
-        s = 'hello world'
-        with self.assertRaises(TypeError):
-            s.split(2)
+        url = 'http://food2fork.com/api/search'
+        params = {
+            'key': food2fork.FOOD2FORK_API_KEY,
+            'q': 'avocado'
+        }
+        response = requests.get(url, params=params)
+        self.assertEqual(response.status_code, 200)
+
+        data = response.json()
+        self.assertTrue('recipes' in data)
 
 if __name__ == '__main__':
     unittest.main()

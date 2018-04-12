@@ -1,0 +1,155 @@
+/* 
+project: MLFoodPairing
+author: Julien Spronck
+email: github@frenetic.be
+website: https://frenetic.be
+*/
+
+body, html {
+  width: 100%;
+  background-color: steelblue;
+  color: white;
+  font-family: 'Open Sans', sans-serif, Palatino;
+  font-weight: 300;
+}
+
+#disclaimer {
+  margin: 1em 0;
+}
+
+header, footer {
+  background-color: steelblue;
+  color: white;
+}
+
+header {
+  padding: 1em;
+}
+.main-row {
+  background-color: white;
+  color: steelblue;
+  padding: 1em 0;
+}
+
+.alert-row {
+  background-color: white;
+  color: steelblue;
+}
+
+.title {
+  padding: 1em 1em 0;
+}
+
+.title a, .title a:visited, .title a:link {
+  color: white;
+  text-decoration: underline;
+}
+
+.title a:hover {
+  color: orange;
+}
+
+.definition {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+footer {
+  padding: 1em 0;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.footer-links a, .footer-links a:visited, .footer-links a:link {
+  color: white;
+  text-decoration: underline;
+}
+
+.title a:hover {
+  color: orange;
+}
+
+.alert {
+  display: none;
+}
+
+input#projectname:valid {
+  color: limegreen;
+  outline: 2px solid limegreen;
+}
+
+input#projectname:invalid {
+  color: red;
+  outline: 2px solid red;
+}
+
+label.dirs {
+  font-weight: 600;
+}
+
+.dirgroup {
+  margin-bottom: 0;
+}
+
+.spacer {
+  padding: 0 0.5em;
+}
+
+.vspacer {
+  padding-top: 1em;
+}
+
+.files {
+  padding-left: 1.5em;
+}
+
+.inglabel {
+  text-align: center;
+}
+
+#result {
+  text-align: center;
+}
+
+.inner-result {
+  margin: 0 auto;
+}
+
+#result a {
+  padding: 0.5em;
+  color: white;
+}
+
+.white {
+  padding: 0.1em;
+  color: white;
+}
+
+.QTY {
+  background-color: limegreen;
+}
+
+.UNIT {
+  background-color: deepskyblue;
+}
+
+.NAME {
+  background-color: tomato;
+}
+
+.COM {
+  background-color: white;
+}
+
+#result a.COM {
+  color: black;
+}

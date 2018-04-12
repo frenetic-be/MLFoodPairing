@@ -1,0 +1,53 @@
+/* 
+project: MLFoodPairing
+author: Julien Spronck
+email: github@frenetic.be
+website: https://frenetic.be
+*/
+
+body, html {
+  background-color: steelblue;
+}
+
+.inglabel {
+  text-align: center;
+}
+
+#result {
+  text-align: center;
+  display: none;
+}
+
+.inner-result {
+  margin: 0 auto;
+}
+
+#result a {
+  padding: 0.5em;
+  color: white;
+}
+
+.white {
+  padding: 0.1em;
+  color: white;
+}
+
+.QTY {
+  background-color: limegreen;
+}
+
+.UNIT {
+  background-color: deepskyblue;
+}
+
+.NAME {
+  background-color: tomato;
+}
+
+.COM {
+  background-color: white;
+}
+
+#result a.COM {
+  color: black;
+}

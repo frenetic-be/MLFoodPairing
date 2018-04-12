@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/intro.css">
+
+  <title>MLFoodPairing</title>
+</head>
+<body>
+
+  <div class="container-fluid main-container">
+    <header class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-10 offset-sm-1 title text-center">
+            <!-- <h2>Food Pairing using Machine Learning</h2> -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand">Food Pairing using Machine Learning</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link">Method <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="results.html">Results</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <section class="row main-row">
+      <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+        <h4>Intro</h4>
+        <p>
+          Food pairing is an art in and of itself.
+          Combining ingredients - their texture, aroma and taste - goes a long way when it comes to creating an enjoyable meal.
+        </p>
+        <p>
+          In this project, I wanted to know if the internet had the answer to the common question: <em>"What goes well with ...?"</em>.
+          While the question of food pairing can be tackled by trying to identify key flavor components that ingredients have in common or that compliment each other,
+          I was interested in taking a different approach. I first collected data from thousands of popular online recipes and used Natural Language Processing (NLP) and Machine Learning (ML) to extract the ingredients for each recipe.
+          I then simply computed the most common food combinations in the most popular recipes.
+        </p>
+      </article>
+    </section>
+    <section class="row main-row">
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>Data source</h4>
+          <p>
+            I used the <a href="http://food2fork.com/about/api">Food2Fork API</a> to gather information about some of the most popular online recipes.
+            The <a href="http://food2fork.com/about/api">Food2Fork API</a> allows to view the top socially-ranked recipes across a database of popular publishers (All Recipes, Epicurious and many others) or to search through all recipes by name or ingredient.
+            Using this API, I was able to collect a list of ingredients for the 30,000 most popular recipes, where populaity is measured by social media ranking.
+          </p>
+        </article>
+      </section>
+      <section class="row main-row">
+          <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+            <h4>Ingredient parsing</h4>
+            <p>
+              Online recipes can be messy. Ingredient lists can be messy too: they come in many flavors. For example, <em>"1/4 cup cooked shredded chicken"</em>, or <em>"1/3 cup chopped fresh cilantro"</em> or <em>"Fresh avocado cubes, for garnish, if desired"</em>. While, in fact, all we are interested to get from these is <span class="NAME white">&nbsp;chicken&nbsp;</span>, <span class="NAME white">&nbsp;cilantro&nbsp;</span> and <span class="NAME white">&nbsp;avocado&nbsp;</span>. For humans, parsing these ingredient lists and figuring out what we need to buy at the grocery store is trivial. For a computer, not so much.
+            </p>
+            <p>
+              Natural Language Processing allows computers to extract data from human languages. I used NLP and, in particular, the Python <a href="https://www.nltk.org">NLTK</a> package (Natural Language ToolKit) to split phrases into words and categorize these words into word classes (noun, verb, adjectives, ...): this is a process known as part-of-speech tagging or POS-tagging.
+            </p>
+            <p>
+              Using the words themselves, their POS tags and various combinations of consecutive words and tags as features, we can build a Machine Learning model. Such a model will then be able to predict what kind of word is a specific word in a phrase. Is it an ingredient name, a quantity, a unit of measurement or some other word that can be ignored for this project? In order to achieve this, I used a model called Conditional Random Field (often used for labeling or parsing sequential data, such as natural language text or biological sequences) and the Python <a href="https://python-crfsuite.readthedocs.io/en/latest/">python-crfsuite</a> package.
+            </p>
+            <p>
+              For training the model, I used 1000 recipes for which I semi-manually tagged every word of every ingredient phase as <code>QTY</code> (quantity), <code>UNIT</code> (unit of measurement), <code>NAME</code> (ingredient name) or <code>COM</code> (comment). I split this data into 80% training and 20% testing data. After training the model, the precision for ingredient name prediction for the testing data was about 94%.
+            </p>
+            <p>
+              I then wrote a small <a href="http://frenetic.pythonanywhere.com/">Flask API</a> that will return the model prediction from an ingredient phrase. You can test it out here using the following form. The result will appear underneath the form and will be color-coded by category: <span class="white QTY">&nbsp;green for quantities&nbsp;</span>, <span class="white UNIT">&nbsp;blue for units&nbsp;</span> and <span class="white NAME">&nbsp;red for ingredient names&nbsp;</span> (the rest is classified as comments).
+            </p>
+            <br>
+            <form id="ing-form" method="POST">
+              <div class="row">
+                <label for="ingphrase" class="col-sm-10 col-md-2 offset-sm-1 offset-md-0 mb-2 col-form-label inglabel">Ingredient Phrase</label>
+                <input type="text" class="form-control col-sm-10 col-md-8 offset-md-0 offset-sm-1 mb-2" id="ingphrase" name="q" placeholder="e.g. 1/4 cup cooked shredded chicken">
+                <button type="submit" class="btn btn-primary mb-2 col-md-1 col-sm-6 offset-md-1 offset-sm-3">Parse</button>
+              </div>
+            </form>
+            <div id="result" class="row main-row"></div>
+          </article>
+        </section>
+    <section class="row main-row">
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>Cleaning up</h4>
+          <p>
+            First, I parsed all ingredients for each recipe, using the model discussed in the previous section. Each ingredient name was also lemmatized (see NLP stemming/lemmatization). For example, <em>tomato</em> and <em>tomatoes</em> are the same ingredient. Lemmatization will transform <em>tomatoes</em> into <em>tomato</em>.
+          </p>
+          <p>
+            I then counted all ingredients in all recipes and discarded the less common ingredients. This will get rid of most misspelled ingredients and most ML prediction errors.
+          </p>
+          <p>
+            With this new list of ingredients, I built another Machine Learning model (a logistic regression model) to categorize recipes between desserts and non-desserts. I was then able to filter out dessert recipes from the rest.
+          </p>
+          <p>
+            Then, I filtered out some of the least interesting ingredients, like salt, pepper, oil, sugar, water, flour, ... and I mapped some ingredients to take care of the last ingredient name prediction errors, spelling mistakes and other examples like <em>eggplant</em> and <em>aubergine</em> depending on where in the world the recipe came form.
+          </p>
+          <p>
+            With the remaining list of ingredient, I manually categorized them into "produce", "meat/fish", "nut", "spice", "herb", "dairy" or "other" and filter out all of the "other" ingredients to keep a total of 251 different ingredients.
+          </p>
+        </article>
+      </section>
+      <section class="row main-row">
+          <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+            <h4>Data visualization</h4>
+            <p>
+              Finally, I used d3.js for data visualization. Check it out on the <a href="results.html">results</a> page.
+            </p>
+          </article>
+        </section>
+    <footer class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+          <ul class="footer-links text-center">
+              <li><a href="https://twitter.com/frenetic_be">twitter</a></li>
+              <li><a href="https://github.com/frenetic-be">github</a></li>
+              <li><a href="https://stackoverflow.com/users/2184364/julien-spronck">stackoverflow</a></li>
+          </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="static/js/intrologic.js"></script>
+
+</body>
+</html>

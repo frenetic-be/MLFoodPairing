@@ -1,0 +1,68 @@
+/* 
+project: MLFoodPairing
+author: Julien Spronck
+email: github@frenetic.be
+website: https://frenetic.be
+*/
+
+.hex {
+  stroke: white;
+  fill: steelblue;
+  fill-opacity: 0.15;
+}
+
+.hex.herb {
+  fill: limegreen;
+}
+
+.hex.meat {
+  fill: red;
+}
+
+.hex.dairy {
+  fill: grey;
+}
+
+.hex.nut {
+  fill: maroon;
+}
+
+.hex.spice {
+  fill: darkorange;
+}
+
+.hex.detail {
+  fill-opacity: 1.0;
+}
+
+.hexgroup text {
+  font-size: 0.9em;
+  fill: white;
+}
+
+.hexgroup:hover > .hex {
+  fill-opacity: 1.0;
+}
+
+.hexgroup.highlight > .hex {
+  fill-opacity: 0.9; 
+}
+
+.hexgroup.selected > .hex {
+  fill-opacity: 1.0;
+  stroke: black;
+  stroke-width: 2px;
+  stroke-dasharray: 3;
+}
+
+#detail {
+  display: none;
+}
+
+#detail text {
+  font-size: 1.15em;
+}
+
+/* #hex_avocado > .hex {
+  fill: url(#img_avocado);
+} */

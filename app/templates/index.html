@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+  <title>IngParsing API Documentation</title>
+</head>
+<body>
+
+    <div class="container-fluid main-container">
+      <header class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-10 offset-sm-1 title text-center">
+            <h2>IngParsing API Documentation</h2>
+        </div>
+      </header>
+      
+      <section class="row main-row">
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>Overview</h4>
+
+          <p>
+            The <b>IngParsing</b> API attempts to process an ingredient phrase like "1/4 cup cooked shredded chicken" and categorize each word into quantities (QTY), units (UNIT), ingredient name (NAME) or comments (COM).
+          </p>
+      
+          <p>
+            It uses a machine learning model to predict the probability of each word to be in a certain category.
+          </p>
+        </article>
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>Documentation</h4>
+
+          <table class="blog-comparison table table-striped">
+            <tbody>
+              <tr> 
+                <th valign="top"> Title </th>
+                <td>
+                  <span class="caption">Parse</span>
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> URL </th>
+                <td> 
+                  <span class="caption"><b><code>/parse</code>
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> Method </th>
+                <td> <span class="caption"><b><code>GET</code></b>
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> URL Params </th>
+                <td>
+                  <span class="caption">
+                    <b>Required:</b> <br>
+                    <code>q=[string]</code>: ingredient phrase<br>
+                    example: <code>q=1/4%20cup%20cooked%20shredded%20chicken</code> to parse the phrase "1/4 cup cooked shredded chicken"
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> Success Response </th>
+                <td><span class="caption">The API will return an array. Each element in the array will contain a token (word), their POS tag and their predicted category (QTY, UNIT, NAME or COM).</span>
+                  <b>For example: </b> <br>
+                  <b>Code:</b> 200 <br>
+                  <b>Content:</b>
+                  <pre>
+[
+  [
+    "1/4", 
+    "CD", 
+    "QTY"
+  ], 
+  [
+    "cup", 
+    "NN", 
+    "UNIT"
+  ], 
+  [
+    "cooked", 
+    "VBD", 
+    "COM"
+  ], 
+  [
+    "shredded", 
+    "JJ", 
+    "COM"
+  ],
+  [
+    "chicken", 
+    "NN", 
+    "NAME"
+  ]
+]</pre>
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> Error Response </th> 
+                <td> 
+                  <span class="caption">An API call without the required <code>q</code> parameter will return a 400 status code</span>
+                </td>
+              </tr>
+              <tr>
+                <th valign="top"> Sample Call </th>
+                <td>
+                  <span class="caption">A sample call using jquery:</span> <br><br> <pre>
+$.ajax({
+  type: "GET",
+  url: "/parse",
+  data: "q=1/4%20cup%20cooked%20shredded%20chicken",
+  contentType: 'text/plain',
+  success: function(data){
+      console.log(data)
+  }
+});
+            
+            </pre> </td> </tr></tbody></table>
+
+        </article>
+      </section>
+      
+      <footer class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+            <ul class="footer-links text-center">
+                <li><a href="https://twitter.com/frenetic_be">twitter</a></li>
+                <li><a href="https://github.com/frenetic-be">github</a></li>
+                <li><a href="https://stackoverflow.com/users/2184364/julien-spronck">stackoverflow</a></li>
+            </ul>
+        </div>
+      </footer>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="static/js/intrologic.js"></script>
+  
+  </body>
+</html>

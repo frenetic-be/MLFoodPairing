@@ -1,4 +1,4 @@
-# food2fork
+# MLFoodPairing
 
 One Paragraph of project description goes here
 
