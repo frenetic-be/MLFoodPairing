@@ -55,6 +55,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * So was the original NYT blog post about ["Extracting Structured Data From Recipes Using Conditional Random Fields"](http://open.blogs.nytimes.com/2015/04/09/extracting-structured-data-from-recipes-using-conditional-random-fields/?_r=0).
 
+* The ingredient-parsing Flask API was deployed using [pythonanywhere.com](https://www.pythonanywhere.com/).
+
 * Other Python packages used:
     * [python-crfsuite](https://python-crfsuite.readthedocs.io/en/latest/)
     * [Flask](http://flask.pocoo.org)
