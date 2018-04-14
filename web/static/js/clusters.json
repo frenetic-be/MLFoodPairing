@@ -1,0 +1,956 @@
+[
+    {
+        "ingredient": "anchovy",
+        "x": 0.6727714552,
+        "y": 0.3348066335,
+        "cluster": 1
+    },
+    {
+        "ingredient": "andouille sausage",
+        "x": 0.5915592041,
+        "y": 0.2454114815,
+        "cluster": 1
+    },
+    {
+        "ingredient": "anise",
+        "x": 0.3051005548,
+        "y": 0.2734233997,
+        "cluster": 2
+    },
+    {
+        "ingredient": "apricot",
+        "x": 0.2210209033,
+        "y": 0.2304215239,
+        "cluster": 2
+    },
+    {
+        "ingredient": "artichoke",
+        "x": 0.8020990631,
+        "y": 0.1601459844,
+        "cluster": 1
+    },
+    {
+        "ingredient": "asafetida",
+        "x": 0.3389779483,
+        "y": 0.5474520326,
+        "cluster": 0
+    },
+    {
+        "ingredient": "banana",
+        "x": 0.3696600484,
+        "y": 0.0667408019,
+        "cluster": 2
+    },
+    {
+        "ingredient": "bean sprouts",
+        "x": 0.2975058305,
+        "y": 0.3703144892,
+        "cluster": 0
+    },
+    {
+        "ingredient": "beetroot",
+        "x": 0.3293841946,
+        "y": 0.1934840922,
+        "cluster": 2
+    },
+    {
+        "ingredient": "black beans",
+        "x": 0.5948266956,
+        "y": 0.5432874044,
+        "cluster": 3
+    },
+    {
+        "ingredient": "black olives",
+        "x": 0.8183869739,
+        "y": 0.2336433701,
+        "cluster": 1
+    },
+    {
+        "ingredient": "black-eyed peas",
+        "x": 0.4786906519,
+        "y": 0.5171284517,
+        "cluster": 3
+    },
+    {
+        "ingredient": "blackberry",
+        "x": 0.4069552592,
+        "y": 0.1026287517,
+        "cluster": 2
+    },
+    {
+        "ingredient": "blueberry",
+        "x": 0.3554698796,
+        "y": 0.1672009135,
+        "cluster": 2
+    },
+    {
+        "ingredient": "bok choy",
+        "x": 0.3036202527,
+        "y": 0.4237589691,
+        "cluster": 0
+    },
+    {
+        "ingredient": "brie",
+        "x": 0.4798711873,
+        "y": 0.1662841782,
+        "cluster": 2
+    },
+    {
+        "ingredient": "broad beans",
+        "x": 0.430484123,
+        "y": 0.0821452088,
+        "cluster": 2
+    },
+    {
+        "ingredient": "butter beans",
+        "x": 0.4872327822,
+        "y": 0.4933685085,
+        "cluster": 3
+    },
+    {
+        "ingredient": "butternut squash",
+        "x": 0.4078280353,
+        "y": 0.4900280693,
+        "cluster": 0
+    },
+    {
+        "ingredient": "cannellini beans",
+        "x": 0.6658902865,
+        "y": 0.3868240328,
+        "cluster": 3
+    },
+    {
+        "ingredient": "caper",
+        "x": 0.7685962033,
+        "y": 0.2768677282,
+        "cluster": 1
+    },
+    {
+        "ingredient": "caraway seeds",
+        "x": 0.3932195186,
+        "y": 0.306277149,
+        "cluster": 2
+    },
+    {
+        "ingredient": "cardamom",
+        "x": 0.2897353161,
+        "y": 0.472799967,
+        "cluster": 0
+    },
+    {
+        "ingredient": "cashew",
+        "x": 0.4059403746,
+        "y": 0.4525748522,
+        "cluster": 0
+    },
+    {
+        "ingredient": "celeriac",
+        "x": 0.4874301549,
+        "y": 0.246868131,
+        "cluster": 2
+    },
+    {
+        "ingredient": "celery seeds",
+        "x": 0.5208635224,
+        "y": 0.4042895219,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chard",
+        "x": 0.4968250058,
+        "y": 0.3956625902,
+        "cluster": 3
+    },
+    {
+        "ingredient": "cherry",
+        "x": 0.2247379164,
+        "y": 0.0947546793,
+        "cluster": 2
+    },
+    {
+        "ingredient": "chervil",
+        "x": 0.5811304321,
+        "y": 0.2575840948,
+        "cluster": 1
+    },
+    {
+        "ingredient": "chestnut",
+        "x": 0.3902152407,
+        "y": 0.2333836762,
+        "cluster": 2
+    },
+    {
+        "ingredient": "chickpea",
+        "x": 0.4531215854,
+        "y": 0.5058708013,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chili pepper",
+        "x": 0.4689813961,
+        "y": 0.5448735107,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chili powder",
+        "x": 0.4775303744,
+        "y": 0.6704458995,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chinese five-spice powder",
+        "x": 0.2615511955,
+        "y": 0.3755844348,
+        "cluster": 0
+    },
+    {
+        "ingredient": "chipotle chili powder",
+        "x": 0.5725630025,
+        "y": 0.377642926,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chipotle pepper",
+        "x": 0.540125759,
+        "y": 0.5313897835,
+        "cluster": 3
+    },
+    {
+        "ingredient": "chorizo",
+        "x": 0.4989186714,
+        "y": 0.2877445948,
+        "cluster": 2
+    },
+    {
+        "ingredient": "cilantro",
+        "x": 0.6879513179,
+        "y": 0.5064404001,
+        "cluster": 3
+    },
+    {
+        "ingredient": "cinnamon",
+        "x": 0.2421693027,
+        "y": 0.3669812789,
+        "cluster": 0
+    },
+    {
+        "ingredient": "clam",
+        "x": 0.4849616688,
+        "y": 0.3133767753,
+        "cluster": 3
+    },
+    {
+        "ingredient": "clove",
+        "x": 0.2410343874,
+        "y": 0.4113534628,
+        "cluster": 0
+    },
+    {
+        "ingredient": "coconut",
+        "x": 0.2343612069,
+        "y": 0.605099561,
+        "cluster": 0
+    },
+    {
+        "ingredient": "coriander seeds",
+        "x": 0.2380621589,
+        "y": 0.5589504347,
+        "cluster": 0
+    },
+    {
+        "ingredient": "cotija cheese",
+        "x": 0.6506746549,
+        "y": 0.4229850168,
+        "cluster": 3
+    },
+    {
+        "ingredient": "cottage cheese",
+        "x": 0.5759141342,
+        "y": 0.49517004,
+        "cluster": 3
+    },
+    {
+        "ingredient": "crabmeat",
+        "x": 0.5730302004,
+        "y": 0.1862659721,
+        "cluster": 1
+    },
+    {
+        "ingredient": "cranberry",
+        "x": 0.3733671166,
+        "y": 0.3272437152,
+        "cluster": 2
+    },
+    {
+        "ingredient": "currant",
+        "x": 0.4742730555,
+        "y": 0.2187001534,
+        "cluster": 2
+    },
+    {
+        "ingredient": "curry",
+        "x": 0.2417493418,
+        "y": 0.6331093745,
+        "cluster": 0
+    },
+    {
+        "ingredient": "date",
+        "x": 0.3481225495,
+        "y": 0.2380567508,
+        "cluster": 2
+    },
+    {
+        "ingredient": "edamame",
+        "x": 0.3549168757,
+        "y": 0.4237041982,
+        "cluster": 0
+    },
+    {
+        "ingredient": "farro",
+        "x": 0.5136308655,
+        "y": 0.3583990327,
+        "cluster": 3
+    },
+    {
+        "ingredient": "fennel",
+        "x": 0.4670617011,
+        "y": 0.1939175915,
+        "cluster": 2
+    },
+    {
+        "ingredient": "fenugreek",
+        "x": 0.3525955586,
+        "y": 0.5228442421,
+        "cluster": 0
+    },
+    {
+        "ingredient": "fig",
+        "x": 0.4737731789,
+        "y": 0.2468103999,
+        "cluster": 2
+    },
+    {
+        "ingredient": "fontina cheese",
+        "x": 0.5439519682,
+        "y": 0.4638311556,
+        "cluster": 3
+    },
+    {
+        "ingredient": "garam masala",
+        "x": 0.2676726657,
+        "y": 0.5581775767,
+        "cluster": 0
+    },
+    {
+        "ingredient": "garbanzo beans",
+        "x": 0.4188682897,
+        "y": 0.469601188,
+        "cluster": 0
+    },
+    {
+        "ingredient": "ginger",
+        "x": 0.2037212889,
+        "y": 0.5010934708,
+        "cluster": 0
+    },
+    {
+        "ingredient": "gouda cheese",
+        "x": 0.6483633316,
+        "y": 0.4736790984,
+        "cluster": 3
+    },
+    {
+        "ingredient": "granny smith apple",
+        "x": 0.5085463653,
+        "y": 0.3110315104,
+        "cluster": 3
+    },
+    {
+        "ingredient": "grape",
+        "x": 0.7099797602,
+        "y": 0.1799774982,
+        "cluster": 1
+    },
+    {
+        "ingredient": "grape tomatoes",
+        "x": 0.7421935375,
+        "y": 0.2067488773,
+        "cluster": 1
+    },
+    {
+        "ingredient": "grapefruit",
+        "x": 0.2910421898,
+        "y": 0.2577126375,
+        "cluster": 2
+    },
+    {
+        "ingredient": "green bell pepper",
+        "x": 0.6573761494,
+        "y": 0.356424109,
+        "cluster": 1
+    },
+    {
+        "ingredient": "green cabbage",
+        "x": 0.4473866813,
+        "y": 0.4293589556,
+        "cluster": 3
+    },
+    {
+        "ingredient": "green cardamom",
+        "x": 0.2508224024,
+        "y": 0.492524221,
+        "cluster": 0
+    },
+    {
+        "ingredient": "green chili pepper",
+        "x": 0.3287814604,
+        "y": 0.6231927425,
+        "cluster": 0
+    },
+    {
+        "ingredient": "green lentils",
+        "x": 0.3196172301,
+        "y": 0.3407040779,
+        "cluster": 0
+    },
+    {
+        "ingredient": "green olives",
+        "x": 0.67485005,
+        "y": 0.2386355571,
+        "cluster": 1
+    },
+    {
+        "ingredient": "green peas",
+        "x": 0.5754742398,
+        "y": 0.51007017,
+        "cluster": 3
+    },
+    {
+        "ingredient": "halloumi cheese",
+        "x": 0.4981930217,
+        "y": 0.3777336707,
+        "cluster": 3
+    },
+    {
+        "ingredient": "harissa",
+        "x": 0.3669589966,
+        "y": 0.3819284484,
+        "cluster": 0
+    },
+    {
+        "ingredient": "hazelnut",
+        "x": 0.3750365651,
+        "y": 0.2610330941,
+        "cluster": 2
+    },
+    {
+        "ingredient": "italian sausage",
+        "x": 0.6519419094,
+        "y": 0.1811017797,
+        "cluster": 1
+    },
+    {
+        "ingredient": "jicama",
+        "x": 0.5491096245,
+        "y": 0.3153638928,
+        "cluster": 3
+    },
+    {
+        "ingredient": "juniper berries",
+        "x": 0.3689972472,
+        "y": 0.2905234614,
+        "cluster": 2
+    },
+    {
+        "ingredient": "kalamata olives",
+        "x": 0.6746315609,
+        "y": 0.3179057447,
+        "cluster": 1
+    },
+    {
+        "ingredient": "kidney beans",
+        "x": 0.516390874,
+        "y": 0.5458321912,
+        "cluster": 3
+    },
+    {
+        "ingredient": "lamb",
+        "x": 0.1328020996,
+        "y": 0.3724977573,
+        "cluster": 0
+    },
+    {
+        "ingredient": "lemongrass",
+        "x": 0.3168288699,
+        "y": 0.4676673878,
+        "cluster": 0
+    },
+    {
+        "ingredient": "lentil",
+        "x": 0.5233727431,
+        "y": 0.4227808445,
+        "cluster": 3
+    },
+    {
+        "ingredient": "lime zest",
+        "x": 0.5953875943,
+        "y": 0.4761271946,
+        "cluster": 3
+    },
+    {
+        "ingredient": "mace",
+        "x": 0.3360885509,
+        "y": 0.3840888986,
+        "cluster": 0
+    },
+    {
+        "ingredient": "mandarin oranges",
+        "x": 0.3899553493,
+        "y": 0.4825061187,
+        "cluster": 0
+    },
+    {
+        "ingredient": "marjoram",
+        "x": 0.4449262068,
+        "y": 0.3430382861,
+        "cluster": 3
+    },
+    {
+        "ingredient": "mascarpone",
+        "x": 0.2733211256,
+        "y": 0.0836653588,
+        "cluster": 2
+    },
+    {
+        "ingredient": "mussel",
+        "x": 0.3650254599,
+        "y": 0.3421659219,
+        "cluster": 2
+    },
+    {
+        "ingredient": "mustard seeds",
+        "x": 0.3361424566,
+        "y": 0.5086073974,
+        "cluster": 0
+    },
+    {
+        "ingredient": "napa cabbage",
+        "x": 0.3562405737,
+        "y": 0.4081285576,
+        "cluster": 0
+    },
+    {
+        "ingredient": "okra",
+        "x": 0.5307038924,
+        "y": 0.3232468255,
+        "cluster": 3
+    },
+    {
+        "ingredient": "olive",
+        "x": 0.6073594564,
+        "y": 0.2417587033,
+        "cluster": 1
+    },
+    {
+        "ingredient": "orange bell pepper",
+        "x": 0.4768869211,
+        "y": 0.3497032172,
+        "cluster": 3
+    },
+    {
+        "ingredient": "orange zest",
+        "x": 0.3664106595,
+        "y": 0.2395459107,
+        "cluster": 2
+    },
+    {
+        "ingredient": "oyster",
+        "x": 0.5284598958,
+        "y": 0.1587203168,
+        "cluster": 2
+    },
+    {
+        "ingredient": "pancetta",
+        "x": 0.6008212079,
+        "y": 0.1820851055,
+        "cluster": 1
+    },
+    {
+        "ingredient": "parsnip",
+        "x": 0.2725894941,
+        "y": 0.2181038416,
+        "cluster": 2
+    },
+    {
+        "ingredient": "pear",
+        "x": 0.4410759196,
+        "y": 0.2129717557,
+        "cluster": 2
+    },
+    {
+        "ingredient": "pecorino",
+        "x": 0.7533001388,
+        "y": 0.1245803818,
+        "cluster": 1
+    },
+    {
+        "ingredient": "pepitas",
+        "x": 0.4729339795,
+        "y": 0.4113591519,
+        "cluster": 3
+    },
+    {
+        "ingredient": "pepperoni",
+        "x": 0.8518004857,
+        "y": 0.1358646045,
+        "cluster": 1
+    },
+    {
+        "ingredient": "pinto beans",
+        "x": 0.4902606554,
+        "y": 0.5551057432,
+        "cluster": 3
+    },
+    {
+        "ingredient": "pistachio",
+        "x": 0.4222273953,
+        "y": 0.3060336221,
+        "cluster": 2
+    },
+    {
+        "ingredient": "plum",
+        "x": 0,
+        "y": 0,
+        "cluster": 2
+    },
+    {
+        "ingredient": "poblano pepper",
+        "x": 0.6352885162,
+        "y": 0.3143498134,
+        "cluster": 1
+    },
+    {
+        "ingredient": "pomegranate",
+        "x": 0.4314831841,
+        "y": 0.2648144865,
+        "cluster": 2
+    },
+    {
+        "ingredient": "pomegranate seeds",
+        "x": 0.4145282681,
+        "y": 0.4039547945,
+        "cluster": 3
+    },
+    {
+        "ingredient": "poppy seeds",
+        "x": 0.4403647851,
+        "y": 0.4545103766,
+        "cluster": 3
+    },
+    {
+        "ingredient": "porcini mushrooms",
+        "x": 0.554998891,
+        "y": 0.31891734,
+        "cluster": 3
+    },
+    {
+        "ingredient": "portobello mushrooms",
+        "x": 0.7034242967,
+        "y": 0.3514355961,
+        "cluster": 1
+    },
+    {
+        "ingredient": "prawn",
+        "x": 0.3374597153,
+        "y": 0.3069746659,
+        "cluster": 2
+    },
+    {
+        "ingredient": "prosciutto",
+        "x": 0.637501245,
+        "y": 0.2293306411,
+        "cluster": 1
+    },
+    {
+        "ingredient": "provolone cheese",
+        "x": 0.8580628843,
+        "y": 0.1641751882,
+        "cluster": 1
+    },
+    {
+        "ingredient": "prune",
+        "x": 0.4195055883,
+        "y": 0.3332290427,
+        "cluster": 2
+    },
+    {
+        "ingredient": "pumpkin",
+        "x": 0.4640129852,
+        "y": 0.4572476453,
+        "cluster": 3
+    },
+    {
+        "ingredient": "pumpkin pie spice",
+        "x": 0.5244537962,
+        "y": 0.4630659496,
+        "cluster": 3
+    },
+    {
+        "ingredient": "pumpkin seeds",
+        "x": 0.5299676011,
+        "y": 0.5013362354,
+        "cluster": 3
+    },
+    {
+        "ingredient": "queso fresco",
+        "x": 0.6313229471,
+        "y": 0.4527228563,
+        "cluster": 3
+    },
+    {
+        "ingredient": "radicchio",
+        "x": 0.5413297827,
+        "y": 0.1733973471,
+        "cluster": 2
+    },
+    {
+        "ingredient": "radish",
+        "x": 0.6294105004,
+        "y": 0.3699889853,
+        "cluster": 3
+    },
+    {
+        "ingredient": "raisin",
+        "x": 0.4487844154,
+        "y": 0.3168654731,
+        "cluster": 2
+    },
+    {
+        "ingredient": "raspberry",
+        "x": 0.5371843752,
+        "y": 0.0786158958,
+        "cluster": 2
+    },
+    {
+        "ingredient": "red cabbage",
+        "x": 0.4531389896,
+        "y": 0.4094250676,
+        "cluster": 3
+    },
+    {
+        "ingredient": "red chili pepper",
+        "x": 0.2491550967,
+        "y": 0.4505703123,
+        "cluster": 0
+    },
+    {
+        "ingredient": "red lentils",
+        "x": 0.312668852,
+        "y": 0.6147007138,
+        "cluster": 0
+    },
+    {
+        "ingredient": "refried beans",
+        "x": 0.8481028811,
+        "y": 0.3861719922,
+        "cluster": 1
+    },
+    {
+        "ingredient": "rhubarb",
+        "x": 0.4192962805,
+        "y": 0.2493820666,
+        "cluster": 2
+    },
+    {
+        "ingredient": "romaine lettuce",
+        "x": 0.5622176725,
+        "y": 0.3382415143,
+        "cluster": 3
+    },
+    {
+        "ingredient": "saffron",
+        "x": 0.3889706612,
+        "y": 0.3698549968,
+        "cluster": 0
+    },
+    {
+        "ingredient": "salami",
+        "x": 1,
+        "y": 0.0039829108,
+        "cluster": 1
+    },
+    {
+        "ingredient": "savoy cabbage",
+        "x": 0.5655158307,
+        "y": 0.4343982817,
+        "cluster": 3
+    },
+    {
+        "ingredient": "scallop",
+        "x": 0.4996296044,
+        "y": 0.2688423271,
+        "cluster": 2
+    },
+    {
+        "ingredient": "serrano pepper",
+        "x": 0.4922726968,
+        "y": 0.4638926789,
+        "cluster": 3
+    },
+    {
+        "ingredient": "sesame seeds",
+        "x": 0.3243116945,
+        "y": 0.5320516654,
+        "cluster": 0
+    },
+    {
+        "ingredient": "shiitake mushrooms",
+        "x": 0.308850246,
+        "y": 0.3906578888,
+        "cluster": 0
+    },
+    {
+        "ingredient": "shrimp",
+        "x": 0.4199991286,
+        "y": 0.2261533168,
+        "cluster": 2
+    },
+    {
+        "ingredient": "smoked paprika",
+        "x": 0.4571741231,
+        "y": 0.3655128321,
+        "cluster": 3
+    },
+    {
+        "ingredient": "smoked salmon",
+        "x": 0.7888882808,
+        "y": 0.4198224386,
+        "cluster": 1
+    },
+    {
+        "ingredient": "snow peas",
+        "x": 0.2055269653,
+        "y": 0.4364243457,
+        "cluster": 0
+    },
+    {
+        "ingredient": "star anise",
+        "x": 0.1894451646,
+        "y": 0.281514705,
+        "cluster": 2
+    },
+    {
+        "ingredient": "strawberry",
+        "x": 0.4349435588,
+        "y": 0.1716832384,
+        "cluster": 2
+    },
+    {
+        "ingredient": "sugar snap peas",
+        "x": 0.3710445997,
+        "y": 0.4343306992,
+        "cluster": 0
+    },
+    {
+        "ingredient": "sumac",
+        "x": 0.4740211796,
+        "y": 0.3435363027,
+        "cluster": 3
+    },
+    {
+        "ingredient": "summer squash",
+        "x": 0.5681445397,
+        "y": 0.3017974989,
+        "cluster": 3
+    },
+    {
+        "ingredient": "sun-dried tomatoes",
+        "x": 0.6014593251,
+        "y": 0.4344388069,
+        "cluster": 3
+    },
+    {
+        "ingredient": "sunflower seeds",
+        "x": 0.4802266376,
+        "y": 0.4355809313,
+        "cluster": 3
+    },
+    {
+        "ingredient": "tilapia",
+        "x": 0.6639676845,
+        "y": 0.5508140697,
+        "cluster": 3
+    },
+    {
+        "ingredient": "tomatillo",
+        "x": 0.5815248192,
+        "y": 0.4160144688,
+        "cluster": 3
+    },
+    {
+        "ingredient": "tuna",
+        "x": 0.7012602079,
+        "y": 0.4213932984,
+        "cluster": 3
+    },
+    {
+        "ingredient": "turmeric",
+        "x": 0.2852051104,
+        "y": 0.5882055891,
+        "cluster": 0
+    },
+    {
+        "ingredient": "turnip",
+        "x": 0.2423379036,
+        "y": 0.2745574525,
+        "cluster": 2
+    },
+    {
+        "ingredient": "vanilla",
+        "x": 0.2916949735,
+        "y": 0.0704008862,
+        "cluster": 2
+    },
+    {
+        "ingredient": "veal",
+        "x": 0.5200693978,
+        "y": 0.2698073263,
+        "cluster": 2
+    },
+    {
+        "ingredient": "water chestnuts",
+        "x": 0.4859895357,
+        "y": 0.3332385816,
+        "cluster": 3
+    },
+    {
+        "ingredient": "watercress",
+        "x": 0.5473599382,
+        "y": 0.3910055336,
+        "cluster": 3
+    },
+    {
+        "ingredient": "watermelon",
+        "x": 0.4573392383,
+        "y": 0.2305707647,
+        "cluster": 2
+    },
+    {
+        "ingredient": "white beans",
+        "x": 0.4466550975,
+        "y": 0.5966755809,
+        "cluster": 0
+    },
+    {
+        "ingredient": "yellow bell pepper",
+        "x": 0.5799093046,
+        "y": 0.4000727808,
+        "cluster": 3
+    },
+    {
+        "ingredient": "yellow squash",
+        "x": 0.7445734746,
+        "y": 0.3246371478,
+        "cluster": 1
+    }
+]

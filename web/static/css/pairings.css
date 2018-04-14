@@ -66,3 +66,31 @@ website: https://frenetic.be
 /* #hex_avocado > .hex {
   fill: url(#img_avocado);
 } */
+
+div.tooltip {	
+  position: absolute;			
+  text-align: center;							
+  padding: 0.5em;				
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif, Palatino;
+  font-weight: 300;		
+}
+
+.cluster0 {
+  background-color: tomato;
+}
+
+.cluster1 {
+  background-color: orange;
+}
+
+.cluster2 {
+  background-color: limegreen;
+}
+
+.cluster3 {
+  background-color: steelblue;
+}

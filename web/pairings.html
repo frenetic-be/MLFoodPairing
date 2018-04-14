@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/common.css">
+  <link rel="stylesheet" href="static/css/pairings.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+
+  <title>MLFoodPairing</title>
+</head>
+<body>
+  <div class="container-fluid main-container">
+    <header class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-10 offset-sm-1 title text-center">
+            <!-- <h2>Food Pairing using Machine Learning</h2> -->
+          <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand">Food Pairing using Machine Learning</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="intro.html">Method</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link">Pairings <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="clusters.html">Clusters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/frenetic-be/MLFoodPairing">Source code</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+      </div>
+    </header>
+    <div id="svg-area"></div>
+    <footer class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
+          <ul class="footer-links text-center">
+              <li><a href="https://twitter.com/frenetic_be">twitter</a></li>
+              <li><a href="https://github.com/frenetic-be">github</a></li>
+              <li><a href="https://stackoverflow.com/users/2184364/julien-spronck">stackoverflow</a></li>
+          </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
