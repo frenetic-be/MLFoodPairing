@@ -78,6 +78,24 @@ d3.json('static/js/clusters.json', function(data){
             .on("mouseout", function(d) {		
                 div.style("opacity", 0);	
             });
+
+            var ingstoshow = [
+                'coconut', 'turmeric', 'ginger', 'coriander seeds', 'mustard seeds', 'green cardamom', 'red chili pepper',
+                'apricot', 'banana', 'blueberry', 'strawberry', 'blackberry', 'raspberry', 'pear', 'cherry', 'pomegranate',
+                'pepperoni', 'provolone cheese', 'pancetta', 'prosciutto', 'pecorino', 'italian sausage', 'black olives',
+                'queso fresco', 'cilantro', 'black beans', 'pinto beans', 'black-eyed peas', 'tomatillo', 'chipotle pepper'
+            ];
+
+            svg.selectAll('.labels')
+                .data(data.filter(function(x){return ingstoshow.indexOf(x.ingredient) != -1}))
+            .enter()
+                .append('text')
+                .attr('x', d => xScale(d.x)+10)
+                .attr('y', d => yScale(d.y))
+                .attr('fill', d => colors[d.cluster])
+                .attr('class', 'labels')
+                .text(d => d.ingredient)
+                .style('font-weight', 600);
     });
 
 });
