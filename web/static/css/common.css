@@ -76,3 +76,31 @@ footer {
   padding-top: 1em;
 }
 
+.ingcolor {
+  padding: 0.1em;
+  color: white;
+}
+
+.herb {
+  background-color: limegreen;
+}
+
+.produce {
+  background-color: steelblue;
+}
+
+.meat {
+  background-color: red;
+}
+
+.spice {
+  background-color: darkorange;
+}
+
+.dairy {
+  background-color: grey;
+}
+
+.nut {
+  background-color: maroon;
+}

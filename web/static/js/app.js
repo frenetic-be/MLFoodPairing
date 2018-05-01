@@ -4,47 +4,90 @@
 // website: https://frenetic.be
 
 // Define the svg element
+var svgWidth = $('.main-container').width();
+var svgHeight = $(window).innerHeight() - $('header').innerHeight() - $('footer').innerHeight();
+
 var svg = d3
     .select('#svg-area')
     .append('svg')
-    .attr("width", $(window).width())
-    .attr("height", $(window).height());
+    .attr("width", svgWidth)
+    .attr("height", svgHeight);
+
+function nRows(nCol, nTot){
+    // Calculates the number of rows based on the number of columns and the total number of hexs
+    var out = 0;
+    var tot = nTot;
+    out += 2 * Math.floor(tot/(2 * nCol - 1));
+    tot -= Math.floor(tot/(2 * nCol - 1)) * (2 * nCol - 1);
+    if (tot > 0){
+        if (tot > nCol){
+            return out + 2;
+        }
+        return out + 1;
+    }
+    return out;
+}
+
+// function calculateGeometry(r){
+//     nCol = Math.floor((svgWidth - 4 * r)/(3 * r) + 1);
+//     nRow = Math.floor((svgHeight - 2 * r)/r + 1);
+//     if (nRow % 2 == 0) {
+//         nTot = (2 * nCol - 1) * (nRow / 2);
+//     } else {
+//         nTot = (2 * nCol - 1) * ((nRow - 1) / 2) + 5;
+//     }
+//     return [nCol, nRow, nTot];
+// }
+
+// function optimalRadius(nHex){
+//     var r = 1;
+//     [nCol, nRow, nTot] = calculateGeometry(r);
+//     while (nTot >= nHex) {
+//         r += 1;
+//         [nCol, nRow, nTot] = calculateGeometry(r);
+//     }
+//     r -= 1;
+//     [nCol, nRow, nTot] = calculateGeometry(r);
+//     nRow = nRows(nCol, nHex);
+//     var newWidth = 2 * r + 3 * r * (nCol - 1);
+//     var newHeight = r * (nRow + 1) / 2 * Math.sqrt(3);
+//     var leftMargin = Math.floor((svgWidth - newWidth)/2);
+//     var topMargin = Math.floor((svgHeight - newHeight)/2);
+//     return [r, nRow, nCol, leftMargin, topMargin];
+// }
+
+function calculateGeometry(r, nTot){
+    // Calculates the number of rows and columns based on the radius and the total number of hexs
+    var nCol = Math.floor((svgWidth - 4 * r)/(3 * r) + 1);
+    var nRow = nRows(nCol, nTot);
+    var newWidth = 2 * r + 3 * r * (nCol - 1);
+    var newHeight = r * (nRow + 1) / 2 * Math.sqrt(3);
+    return [nCol, nRow, newWidth, newHeight];
+}
 
 function optimalRadius(nHex){
-    var W = $(window).width();
-    var H = $(window).height();
+    // Calculates the best hexagon radius (radius of the circle containing the hexagon) that will
+    // fill up the page
     var r = 1;
-    nCol = Math.floor((W - 2 * r)/(3 * r) + 1);
-    nRow = Math.floor((H - 2 * r)/r + 1);
-    if (nRow % 2 == 0) {
-        nTot = (2 * nCol - 1) * (nRow / 2);
-    } else {
-        nTot = (2 * nCol - 1) * ((nRow - 1) / 2) + 5;
-    }
-    while (nTot >= nHex) {
+    [nCol, nRow, newWidth, newHeight] = calculateGeometry(r, nHex);
+    while (newHeight < svgHeight - 2 * r) {
         r += 1;
-        nCol = Math.floor((W - 2 * r)/(3 * r) + 1);
-        nRow = Math.floor((H - 2 * r)/r + 1);
-        if (nRow % 2 == 0) {
-            nTot = (2 * nCol - 1) * (nRow / 2);
-        } else {
-            nTot = (2 * nCol - 1) * ((nRow - 1) / 2) + 5;
-        }
+        [nCol, nRow, newWidth, newHeight] = calculateGeometry(r, nHex);
     }
-    r -= 1
-    var newWidth = 2 * r + 3 * r * (nCol - 1);
-    var newHeight = 2 * r + r * (nRow - 1);
-    var leftMargin = Math.floor((W - newWidth)/2);
-    var topMargin = Math.floor((H - newHeight)/2);
+    r -= 1;
+    [nCol, nRow, newWidth, newHeight] = calculateGeometry(r, nHex);
+    var leftMargin = Math.floor((svgWidth - newWidth)/2);
+    var topMargin = Math.floor((svgHeight - newHeight)/2);
     return [r, nRow, nCol, leftMargin, topMargin];
 }
     
 function text2id(text){
+    // Creates an id from an ingredient name
     return "hex_" + text.toLowerCase().split(" ").join("_");
 }
 
-function toTitleCase(str)
-{
+function toTitleCase(str){
+    // Transforms a string to title case
     return str.replace(/\w\S*/g, function(txt){
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
@@ -97,20 +140,7 @@ function wrap(text, width) {
 var nHex = Object.keys(data).length;
 var [radius, nRow, nCol, leftMargin, topMargin] = optimalRadius(nHex);
 
-var defs = svg.append('svg:defs');
-
 function makeGenHex(radius, xp, yp, text, clss, detail) {
-
-    // defs.append("svg:pattern")
-    //     .attr("id", "img_" + text.toLowerCase().split(" ").join("_"))
-    //     .attr("width", 2*radius)
-    //     .attr("height", 2*radius)
-    //     .append("svg:image")
-    //     .attr("xlink:href", 'static/pictures/' + text.toLowerCase().split(" ").join("_") + '.jpg')
-    //     .attr("width", 180)
-    //     .attr("height", 180)
-    //     .attr("x", -90)
-    //     .attr("y", -90);
 
     var h = (Math.sqrt(3)/2);
     var hexagonData = [

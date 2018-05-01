@@ -5,6 +5,17 @@ email: github@frenetic.be
 website: https://frenetic.be
 */
 
+header {
+  padding-bottom: 0;
+}
+
+header article {
+  font-style: italic;
+  padding: 0.5em 2em;
+  background-color: white;
+  color: steelblue;
+}
+
 .hex {
   stroke: white;
   fill: steelblue;

@@ -118,13 +118,27 @@
         </article>
       </section>
       <section class="row main-row">
-          <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
-            <h4>Data visualization</h4>
-            <p>
-              Finally, I used d3.js for data visualization. Check it out on the <a href="pairings.html">results</a> page.
-            </p>
-          </article>
-        </section>
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>Food pairing visualization</h4>
+          <p>
+            Using <a href="https://d3js.org">d3.js</a>, I created a honeycomb pattern, where each hexagon represents one ingredient. Each hexagon is color-coded as a function of ingredient type: <span class="ingcolor produce">&nbsp;produce&nbsp;</span>, <span class="ingcolor meat">&nbsp;meat/fish&nbsp;</span>, <span class="ingcolor nut">&nbsp;nut&nbsp;</span>, <span class="ingcolor spice">&nbsp;spice&nbsp;</span>, <span class="ingcolor herb">&nbsp;herb&nbsp;</span>, <span class="ingcolor dairy">&nbsp;dairy&nbsp;</span>. When hovering over an ingredient, you can see its full name. When clicking on it, you can see all the ingredients commonly paired with the selected ingredient. Check it out on the <a href="pairings.html">pairings</a> page.
+          </p>
+        </article>
+      </section>
+      <section class="row main-row">
+        <article class="col-lg-8 offset-lg-2 col-md-10 offset-sm-1 col-sm-8 offset-sm-0">
+          <h4>K-Means clustering of ingredients</h4>
+          <p>
+            Can we use machine learning to identify clusters of ingredients?
+          </p>
+          <p>
+            In order to find ingredient clusters, we need to create a graph with all the ingredients. I used graph theory and a Python package called <a href="https://networkx.github.io">networkx</a>. Each node of the graph is an ingredient and each edge is an ingredient combination. I assigned a weight to each edge. Since the edge represents the combination between two ingredients, it made sense to weight the edge as a function of how important/common the combination was. I used the pointwise mutual information (PMI) between the two ingredients, which gives the probability that two ingredients occur together against the probability that they occur separately. Once I computed all weights, I used <a href="https://networkx.github.io">networkx</a> to create a weighted graph. For clarity, I filtered out the least important ingredients and kept only the most important ingredient combination.
+          </p>
+          <p>
+            Once I built a graph of all ingredients, I could use a K-Means algorithm to identify four clusters of ingredients. The results can be seen on the <a href="clusters.html">clusters</a> page. Interestingly, the four clusters seem to match more or less four broad food categories/cuisines: Indian (red dots), fruit and salads (green dots), Italian (orange) and Mexican (blue).
+          </p>
+        </article>
+      </section>
     <footer class="row">
       <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
           <ul class="footer-links text-center">

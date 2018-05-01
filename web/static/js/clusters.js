@@ -6,7 +6,7 @@
 // Define the svg element
 
 var width = $(window).width();
-var height = $(window).height();
+var height = $(window).innerHeight() - $('header').innerHeight() - $('footer').innerHeight();
 var margins = {
     top: 20,
     left: 20,
@@ -63,6 +63,8 @@ d3.json('static/js/clusters.json', function(data){
             .attr('cy', d => yScale(d.y))
             .attr('r', 7)
             .attr('fill', d => colors[d.cluster])
+            .attr('stroke', d => colors[d.cluster])
+            .attr('fill-opacity', 0.7)
             .attr('class', 'node')
             .on("mouseover", function(d) {		
                 div.html(d.ingredient)	

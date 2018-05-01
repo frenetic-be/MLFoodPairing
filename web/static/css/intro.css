@@ -51,3 +51,12 @@ body, html {
 #result a.COM {
   color: black;
 }
+
+section a, section a:visited, section a:link {
+  color: steelblue;
+  text-decoration: underline;
+}
+  
+section a:hover {
+  color: tomato;
+}

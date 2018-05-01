@@ -27,3 +27,4 @@ food2fork.egg-info/*
 
 config.py
 pip-selfcheck.json
+.ipynb_checkpoints
