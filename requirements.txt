@@ -6,7 +6,7 @@ chardet==3.0.4
 click==6.7
 colorama==0.3.9
 docutils==0.14
-Flask==0.12.2
+Flask==1.0
 idna==2.6
 imagesize==1.0.0
 itsdangerous==0.24
