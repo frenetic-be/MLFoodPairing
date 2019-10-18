@@ -13,7 +13,7 @@ itsdangerous==0.24
 Jinja2==2.10
 lxml==4.2.1
 MarkupSafe==1.0
-nltk==3.2.5
+nltk==3.4.5
 numpy==1.14.2
 packaging==17.1
 Pygments==2.2.0
